@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DF50E12-0C13-497A-AF9D-D17259AC1228}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Library_Management_System</RootNamespace>
+    <AssemblyName>Library Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBooks.Designer.cs">
+      <DependentUpon>AddBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMember.Designer.cs">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBook.Designer.cs">
+      <DependentUpon>ViewBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddBooks.resx">
+      <DependentUpon>AddBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMember.resx">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ViewBook.resx">
+      <DependentUpon>ViewBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Database\NewBook.sql" />
+    <Content Include="icon and imgs\add book.gif" />
+    <Content Include="icon and imgs\addstudent.gif" />
+    <None Include="icon and imgs\Bean Eater-1s-77px.gif" />
+    <Content Include="icon and imgs\books_library_shelves_138556_1920x1080.jpg" />
+    <Content Include="icon and imgs\deash1.jpg" />
+    <None Include="icon and imgs\Ellipsis-1s-237px.gif" />
+    <Content Include="icon and imgs\giphy.gif" />
+    <Content Include="icon and imgs\icons8-add-book-48.png" />
+    <Content Include="icon and imgs\icons8-add-book-96.png" />
+    <Content Include="icon and imgs\icons8-add-user-male-50.png" />
+    <Content Include="icon and imgs\icons8-address-book-100.png" />
+    <Content Include="icon and imgs\icons8-book-philosophy-50.png" />
+    <Content Include="icon and imgs\icons8-bookmark-book-64.png" />
+    <Content Include="icon and imgs\icons8-books-50.png" />
+    <Content Include="icon and imgs\icons8-exit-sign-50.png" />
+    <Content Include="icon and imgs\icons8-return-book-50.png" />
+    <Content Include="icon and imgs\icons8-return-book-64.png" />
+    <Content Include="icon and imgs\icons8-student-male-100.png" />
+    <Content Include="icon and imgs\icons8-student-male-1000.png" />
+    <Content Include="icon and imgs\icons8-student-male-50.png" />
+    <Content Include="icon and imgs\icons8-view-50.png" />
+    <Content Include="icon and imgs\icons8-view-501.png" />
+    <Content Include="icon and imgs\image_processing20191025-19942-14gi0n7.gif" />
+    <Content Include="icon and imgs\issueBook.gif" />
+    <None Include="icon and imgs\login-user.png" />
+    <None Include="icon and imgs\login-pass.png" />
+    <Content Include="icon and imgs\motivation1.jpg" />
+    <Content Include="icon and imgs\search.gif" />
+    <Content Include="icon and imgs\search1.gif" />
+    <Content Include="icon and imgs\view book gif.gif" />
+    <Content Include="icon and imgs\view book gif1.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
