@@ -119,6 +119,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Database\NewBook.sql" />
+    <Content Include="Database\NewMember.sql" />
     <Content Include="icon and imgs\add book.gif" />
     <Content Include="icon and imgs\addstudent.gif" />
     <None Include="icon and imgs\Bean Eater-1s-77px.gif" />

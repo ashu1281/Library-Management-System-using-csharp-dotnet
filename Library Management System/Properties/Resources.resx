@@ -142,17 +142,17 @@
   <data name="view book gif1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\view book gif1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-student-male-1000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon and imgs\icons8-student-male-1000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="view book gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\view book gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-return-book-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\icons8-return-book-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login-pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon and imgs\login-pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-student-male-10001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\icons8-student-male-1000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-student-male-1000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\icons8-student-male-1000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\login-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +163,14 @@
   <data name="addstudent2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\addstudent.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-student-male-1001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\icons8-student-male-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-books-501" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\icons8-books-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ellipsis-1s-237px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\Ellipsis-1s-237px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="addstudent3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\addstudent.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,20 +181,29 @@
   <data name="motivation1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\motivation1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-student-male-10002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\icons8-student-male-1000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addstudent4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\addstudent.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-add-user-male-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\icons8-add-user-male-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-books-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon and imgs\icons8-books-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="addstudent5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\addstudent.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-add-book-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon and imgs\icons8-add-book-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ellipsis-1s-237px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\Ellipsis-1s-237px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login-pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\login-pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\add book.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ellipsis-1s-237px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon and imgs\Ellipsis-1s-237px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-books-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\icons8-books-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-student-male-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\icons8-student-male-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,10 +211,13 @@
   <data name="icons8-view-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\icons8-view-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-add-book-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\icons8-add-book-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-exit-sign-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon and imgs\icons8-exit-sign-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ellipsis-1s-237px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon and imgs\Ellipsis-1s-237px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="addstudent6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon and imgs\addstudent.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

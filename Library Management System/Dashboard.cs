@@ -17,11 +17,7 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
-        private void addStudentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -65,6 +61,23 @@ namespace Library_Management_System
         {
             ViewBook vb = new ViewBook();
             vb.Show();
+        }
+
+
+        public static int memRestrict = 0;
+        private void addMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(memRestrict == 0)
+            {
+
+                AddMember addMember = new AddMember();
+                addMember.Show();
+                memRestrict++;
+            }
+            else
+            {
+                MessageBox.Show("Form is already Opened.", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }
