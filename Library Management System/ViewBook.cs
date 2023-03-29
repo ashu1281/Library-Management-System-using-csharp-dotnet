@@ -44,37 +44,37 @@ namespace Library_Management_System
         Int64 rowid;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!=null)
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!=null && dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()!="")
             {
                 bid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                //MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                
+                panel2.Visible = true;
+
+                SqlConnection conn = new SqlConnection();
+                conn.ConnectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=LibraryManagement;Integrated Security=True;Pooling=False";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+
+                cmd.CommandText = "select * from NewBook where bId = "+bid+"";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+
+                da.Fill(ds);
+
+
+                rowid = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
+
+
+                txtbName.Text = ds.Tables[0].Rows[0][1].ToString();
+                txtAuthor.Text = ds.Tables[0].Rows[0][2].ToString();
+                txtPublication.Text = ds.Tables[0].Rows[0][3].ToString();
+                txtPDate.Text = ds.Tables[0].Rows[0][4].ToString();
+                txtPrice.Text = ds.Tables[0].Rows[0][5].ToString();
+                txtQuantity.Text = ds.Tables[0].Rows[0][6].ToString();
             }
-            panel2.Visible = true;
-
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=LibraryManagement;Integrated Security=True;Pooling=False";
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conn;
-
-            cmd.CommandText = "select * from NewBook where bId = "+bid+"";
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            DataSet ds = new DataSet();
-
-            da.Fill(ds);
-
-
-            rowid = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
-
-
-            txtbName.Text = ds.Tables[0].Rows[0][1].ToString();
-            txtAuthor.Text = ds.Tables[0].Rows[0][2].ToString();
-            txtPublication.Text = ds.Tables[0].Rows[0][3].ToString();
-            txtPDate.Text = ds.Tables[0].Rows[0][4].ToString();
-            txtPrice.Text = ds.Tables[0].Rows[0][5].ToString();
-            txtQuantity.Text = ds.Tables[0].Rows[0][6].ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -128,6 +128,8 @@ namespace Library_Management_System
 
             panel2.Visible = false;
 
+            ViewBook_Load(sender, e);
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -155,6 +157,7 @@ namespace Library_Management_System
                 da.Fill(ds);
 
                 MessageBox.Show("Data Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ViewBook_Load(sender, e);
             }
         }
 
@@ -183,6 +186,7 @@ namespace Library_Management_System
                 da.Fill(ds);
 
                 MessageBox.Show("Data Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ViewBook_Load(sender, e);
             }
         }
     }
