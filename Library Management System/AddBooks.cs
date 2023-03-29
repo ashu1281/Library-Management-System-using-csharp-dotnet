@@ -87,5 +87,17 @@ namespace Library_Management_System
         {
             ControlBox = false;
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtBookName.Clear();
+            txtAuthor.Clear();
+            txtPublication.Clear();
+            txtPrice.Clear();
+            txtQuantity.Clear();
+
+            //dateTimePicker1.
+            
+        }
     }
 }
