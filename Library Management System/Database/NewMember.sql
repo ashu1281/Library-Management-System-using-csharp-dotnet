@@ -1,5 +1,6 @@
 ﻿create table NewMember(
-memId int NOT NULL IDENTITY(1,1) primary key,
+ID int NOT NULL IDENTITY(1,1) primary key,
+EnrollID AS 'UID-' + RIGHT('100' + CAST(ID AS VARCHAR(5)), 5) PERSISTED,
 mName varchar(250) not null,
 mContact bigint not null,
 mEmail varchar(250) not null,
@@ -9,5 +10,13 @@ mPinCode bigint not null
 )
 
 
+
+
+
+
+
+
+
 --mName, mContact, mEmail, mState, mCity, mPinCode
 select * from NewMember
+
