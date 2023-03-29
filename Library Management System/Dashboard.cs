@@ -17,11 +17,11 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
-       
-        private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MemberToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -78,6 +78,18 @@ namespace Library_Management_System
             {
                 MessageBox.Show("Form is already Opened.", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+        }
+
+        private void viewMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewMember vm = new ViewMember();
+            vm.Show();
+        }
+
+        private void issueBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IssueBook ib = new IssueBook();
+            ib.Show();
         }
     }
 }
