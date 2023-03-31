@@ -98,12 +98,18 @@ namespace Library_Management_System
                 issueBookRestrict++;
                 IssueBook ib = new IssueBook();
                 ib.Show();
-                ib.TopMost = true;
+                //ib.TopMost = true;
             }
             else
             {
                 MessageBox.Show("Form is already Opened!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void returnBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Return_Book rb = new Return_Book();
+            rb.Show();
         }
     }
 }

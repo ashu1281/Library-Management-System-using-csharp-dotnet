@@ -37,7 +37,7 @@ namespace Library_Management_System
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from NewMember where EnrollID='" + eid + "'";
+                cmd.CommandText = "select * from NewMember where EnrollID LIKE '" + eid + "'";
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();

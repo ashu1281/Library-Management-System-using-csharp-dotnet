@@ -293,6 +293,16 @@ namespace Library_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_return_book_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-return-book-501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_student_male_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-student-male-100", resourceCulture);
@@ -356,6 +366,16 @@ namespace Library_Management_System.Properties {
         internal static System.Drawing.Bitmap icons8_student_male_1002 {
             get {
                 object obj = ResourceManager.GetObject("icons8-student-male-1002", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_student_male_1003 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-student-male-1003", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
