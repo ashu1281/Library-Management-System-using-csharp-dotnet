@@ -108,6 +108,9 @@
     <EmbeddedResource Include="AddMember.resx">
       <DependentUpon>AddMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CompleteBookDetails.resx">
+      <DependentUpon>CompleteBookDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>

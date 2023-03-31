@@ -111,5 +111,11 @@ namespace Library_Management_System
             Return_Book rb = new Return_Book();
             rb.Show();
         }
+
+        private void completeBookDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CompleteBookDetails cbd = new CompleteBookDetails();
+            cbd.Show();
+        }
     }
 }
