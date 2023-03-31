@@ -122,6 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.combostate.BackColor = System.Drawing.Color.LavenderBlush;
+            this.combostate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combostate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combostate.FormattingEnabled = true;
             this.combostate.Items.AddRange(new object[] {
@@ -160,12 +161,12 @@
             "Jammu & Kashmir (UT)",
             "Ladakh (UT)",
             "Lakshadweep (UT)",
-            "Puducherry (UT)"});
+            "Puducherry (UT)",
+            "Other"});
             this.combostate.Location = new System.Drawing.Point(219, 220);
             this.combostate.Name = "combostate";
             this.combostate.Size = new System.Drawing.Size(328, 30);
             this.combostate.TabIndex = 15;
-            this.combostate.Text = " select state";
             // 
             // btnExit
             // 

@@ -71,9 +71,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(28, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1144, 183);
+            this.panel1.Size = new System.Drawing.Size(1042, 183);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -114,20 +114,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(150, 220);
+            this.label3.Location = new System.Drawing.Point(97, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(298, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Enter Enrollment No. / Name :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtSearchMemberName
             // 
             this.txtSearchMemberName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchMemberName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchMemberName.Location = new System.Drawing.Point(464, 217);
+            this.txtSearchMemberName.Location = new System.Drawing.Point(441, 217);
             this.txtSearchMemberName.Name = "txtSearchMemberName";
-            this.txtSearchMemberName.Size = new System.Drawing.Size(211, 30);
+            this.txtSearchMemberName.Size = new System.Drawing.Size(233, 30);
             this.txtSearchMemberName.TabIndex = 2;
             this.txtSearchMemberName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -136,7 +137,7 @@
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(716, 214);
+            this.btnRefresh.Location = new System.Drawing.Point(706, 216);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(129, 33);
             this.btnRefresh.TabIndex = 3;
@@ -168,11 +169,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 273);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 276);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1144, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(1035, 308);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -201,9 +202,9 @@
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(12, 604);
+            this.panel3.Location = new System.Drawing.Point(28, 604);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1144, 364);
+            this.panel3.Size = new System.Drawing.Size(1035, 364);
             this.panel3.TabIndex = 5;
             // 
             // txtenrollID
@@ -216,7 +217,7 @@
             this.txtenrollID.Location = new System.Drawing.Point(238, 87);
             this.txtenrollID.Name = "txtenrollID";
             this.txtenrollID.ReadOnly = true;
-            this.txtenrollID.Size = new System.Drawing.Size(319, 30);
+            this.txtenrollID.Size = new System.Drawing.Size(210, 30);
             this.txtenrollID.TabIndex = 17;
             // 
             // label4
@@ -252,7 +253,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.Cyan;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(963, 295);
+            this.btnCancel.Location = new System.Drawing.Point(854, 295);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(102, 42);
             this.btnCancel.TabIndex = 14;
@@ -266,7 +267,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(802, 295);
+            this.btnDelete.Location = new System.Drawing.Point(693, 295);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(102, 42);
             this.btnDelete.TabIndex = 13;
@@ -280,7 +281,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.LimeGreen;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(653, 295);
+            this.btnUpdate.Location = new System.Drawing.Point(544, 295);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(102, 42);
             this.btnUpdate.TabIndex = 12;
@@ -293,7 +294,7 @@
             this.txtPincode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPincode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPincode.Location = new System.Drawing.Point(715, 215);
+            this.txtPincode.Location = new System.Drawing.Point(606, 215);
             this.txtPincode.Name = "txtPincode";
             this.txtPincode.Size = new System.Drawing.Size(352, 28);
             this.txtPincode.TabIndex = 11;
@@ -303,7 +304,7 @@
             this.txtCity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(715, 149);
+            this.txtCity.Location = new System.Drawing.Point(606, 149);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(352, 28);
             this.txtCity.TabIndex = 10;
@@ -313,7 +314,7 @@
             this.txtState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtState.Location = new System.Drawing.Point(715, 86);
+            this.txtState.Location = new System.Drawing.Point(606, 86);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(352, 28);
             this.txtState.TabIndex = 9;
@@ -326,7 +327,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(238, 275);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(319, 28);
+            this.txtEmail.Size = new System.Drawing.Size(210, 28);
             this.txtEmail.TabIndex = 8;
             // 
             // txtContact
@@ -337,7 +338,7 @@
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContact.Location = new System.Drawing.Point(238, 212);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(319, 28);
+            this.txtContact.Size = new System.Drawing.Size(210, 28);
             this.txtContact.TabIndex = 7;
             // 
             // txtFullName
@@ -348,7 +349,7 @@
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Location = new System.Drawing.Point(238, 149);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(319, 28);
+            this.txtFullName.Size = new System.Drawing.Size(210, 28);
             this.txtFullName.TabIndex = 6;
             // 
             // label10
@@ -357,7 +358,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(610, 213);
+            this.label10.Location = new System.Drawing.Point(501, 213);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 25);
             this.label10.TabIndex = 5;
@@ -382,7 +383,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(610, 153);
+            this.label12.Location = new System.Drawing.Point(501, 153);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 25);
             this.label12.TabIndex = 3;
@@ -407,7 +408,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(610, 87);
+            this.label14.Location = new System.Drawing.Point(501, 87);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(58, 25);
             this.label14.TabIndex = 1;
@@ -432,7 +433,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(1210, 588);
+            this.ClientSize = new System.Drawing.Size(1159, 588);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRefresh);

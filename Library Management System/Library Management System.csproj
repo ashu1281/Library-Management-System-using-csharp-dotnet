@@ -64,17 +64,17 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="IssueBook.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IssueBook.Designer.cs">
-      <DependentUpon>IssueBook.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueBook.Designer.cs">
+      <DependentUpon>IssueBook.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewBook.cs">
       <SubType>Form</SubType>
@@ -99,11 +99,11 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IssueBook.resx">
-      <DependentUpon>IssueBook.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueBook.resx">
+      <DependentUpon>IssueBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,12 +136,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Database\loginTable.sql" />
     <Content Include="Database\NewBook.sql" />
+    <Content Include="Database\IssueReturnBook.sql" />
     <Content Include="Database\NewMember.sql" />
     <Content Include="icon and imgs\add book.gif" />
     <Content Include="icon and imgs\addstudent.gif" />
     <None Include="icon and imgs\Bean Eater-1s-77px.gif" />
     <Content Include="icon and imgs\books_library_shelves_138556_1920x1080.jpg" />
+    <None Include="icon and imgs\Dashboardnew.jpg" />
     <Content Include="icon and imgs\deash1.jpg" />
     <None Include="icon and imgs\Ellipsis-1s-237px.gif" />
     <Content Include="icon and imgs\giphy.gif" />

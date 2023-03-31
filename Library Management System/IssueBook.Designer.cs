@@ -119,6 +119,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnRefresh
             // 
@@ -210,6 +211,7 @@
             this.btnIssueBook.TabIndex = 10;
             this.btnIssueBook.Text = "Issue Book";
             this.btnIssueBook.UseVisualStyleBackColor = false;
+            this.btnIssueBook.Click += new System.EventHandler(this.btnIssueBook_Click);
             // 
             // label8
             // 
@@ -221,20 +223,20 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(367, 22);
             this.label8.TabIndex = 6;
-            this.label8.Text = "Maximum 3 Books Can be ISSUED to 1 Member";
+            this.label8.Text = "Maximum 4 Books Can be ISSUED to 1 Member";
             // 
             // comboBoxBooks
             // 
             this.comboBoxBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxBooks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBooks.FormattingEnabled = true;
             this.comboBoxBooks.Location = new System.Drawing.Point(238, 273);
             this.comboBoxBooks.Name = "comboBoxBooks";
             this.comboBoxBooks.Size = new System.Drawing.Size(359, 33);
             this.comboBoxBooks.TabIndex = 9;
-            this.comboBoxBooks.Text = "Select Book";
             // 
             // dateTimePicker1
             // 
@@ -255,6 +257,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(238, 200);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(359, 30);
             this.txtEmail.TabIndex = 7;
             // 
@@ -266,6 +269,7 @@
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContact.Location = new System.Drawing.Point(238, 124);
             this.txtContact.Name = "txtContact";
+            this.txtContact.ReadOnly = true;
             this.txtContact.Size = new System.Drawing.Size(359, 30);
             this.txtContact.TabIndex = 6;
             // 
@@ -277,6 +281,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(238, 46);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(359, 30);
             this.txtName.TabIndex = 5;
             // 
@@ -354,10 +359,14 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MinimizeBox = false;
             this.Name = "IssueBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IssueBook";
             this.Load += new System.EventHandler(this.IssueBook_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.IssueBook_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.IssueBook_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.IssueBook_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

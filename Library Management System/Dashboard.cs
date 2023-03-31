@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
+    
     public partial class Dashboard : Form
     {
         public Dashboard()
         {
             InitializeComponent();
         }
+
+        
 
         private void MemberToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -50,6 +53,7 @@ namespace Library_Management_System
                 restrict++;
                 AddBooks abs = new AddBooks();
                 abs.Show();
+                abs.TopMost= true;
             }
             else
             {
@@ -86,10 +90,20 @@ namespace Library_Management_System
             vm.Show();
         }
 
+        public static int issueBookRestrict = 0;
         private void issueBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IssueBook ib = new IssueBook();
-            ib.Show();
+            if(issueBookRestrict == 0)
+            {
+                issueBookRestrict++;
+                IssueBook ib = new IssueBook();
+                ib.Show();
+                ib.TopMost = true;
+            }
+            else
+            {
+                MessageBox.Show("Form is already Opened!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

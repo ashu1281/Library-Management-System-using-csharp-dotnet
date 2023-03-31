@@ -44,7 +44,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Wheat;
+            this.menuStrip1.BackColor = System.Drawing.Color.Ivory;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.booksToolStripMenuItem,
@@ -90,7 +90,7 @@
             // 
             // studentsToolStripMenuItem
             // 
-            this.studentsToolStripMenuItem.BackColor = System.Drawing.Color.OldLace;
+            this.studentsToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
             this.studentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addMemberToolStripMenuItem,
             this.viewToolStripMenuItem});
@@ -131,7 +131,7 @@
             // 
             // returnBookToolStripMenuItem
             // 
-            this.returnBookToolStripMenuItem.BackColor = System.Drawing.Color.OldLace;
+            this.returnBookToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
             this.returnBookToolStripMenuItem.Image = global::Library_Management_System.Properties.Resources.icons8_return_book_50;
             this.returnBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
@@ -148,7 +148,7 @@
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.OldLace;
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.LavenderBlush;
             this.exitToolStripMenuItem.Image = global::Library_Management_System.Properties.Resources.icons8_exit_sign_50;
             this.exitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -160,7 +160,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Library_Management_System.Properties.Resources.books_library_shelves_138556_1920x1080;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackgroundImage = global::Library_Management_System.Properties.Resources.Dashboardnew;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1178, 681);
             this.Controls.Add(this.menuStrip1);

@@ -143,6 +143,16 @@ namespace Library_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addstudent7 {
+            get {
+                object obj = ResourceManager.GetObject("addstudent7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bean_Eater_1s_77px {
             get {
                 object obj = ResourceManager.GetObject("Bean Eater-1s-77px", resourceCulture);
@@ -163,6 +173,16 @@ namespace Library_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dashboardnew {
+            get {
+                object obj = ResourceManager.GetObject("Dashboardnew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ellipsis_1s_237px {
             get {
                 object obj = ResourceManager.GetObject("Ellipsis-1s-237px", resourceCulture);
@@ -176,6 +196,16 @@ namespace Library_Management_System.Properties {
         internal static System.Drawing.Bitmap Ellipsis_1s_237px1 {
             get {
                 object obj = ResourceManager.GetObject("Ellipsis-1s-237px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ellipsis_1s_237px2 {
+            get {
+                object obj = ResourceManager.GetObject("Ellipsis-1s-237px2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +423,29 @@ namespace Library_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_pass1 {
+            get {
+                object obj = ResourceManager.GetObject("login-pass1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_user {
             get {
                 object obj = ResourceManager.GetObject("login-user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_user1 {
+            get {
+                object obj = ResourceManager.GetObject("login-user1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

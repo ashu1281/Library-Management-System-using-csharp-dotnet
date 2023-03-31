@@ -79,13 +79,13 @@ namespace Library_Management_System
             {
 
                 this.Close();
+                Dashboard.restrict = 0;
             }
-            Dashboard.restrict = 0;
         }
 
         private void AddBooks_Load(object sender, EventArgs e)
         {
-            ControlBox = false;
+           // ControlBox = false;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

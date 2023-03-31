@@ -226,6 +226,11 @@ namespace Library_Management_System
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
