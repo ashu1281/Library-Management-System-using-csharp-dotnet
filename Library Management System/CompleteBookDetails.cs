@@ -40,7 +40,9 @@ namespace Library_Management_System
 
             if (ds.Tables[0].Rows.Count != 0 )
             {
-                dataGridView1.DataSource = ds.Tables[0];
+                issuedBooksdataGridView1.Columns.Add("serialNumber", "Sr.No.");
+                issuedBooksdataGridView1.DataSource = ds.Tables[0];
+                issuedBooksdataGridView1.Columns[0].Width = 70;
             }
             else
             {
@@ -58,14 +60,16 @@ namespace Library_Management_System
 
             if (ds1.Tables[0].Rows.Count != 0)
             {
-                dataGridView2.DataSource = ds1.Tables[0];
+                returnedBooksdataGridView2.Columns.Add("serialNumber", "Sr.No.");
+                returnedBooksdataGridView2.DataSource = ds1.Tables[0];
+                returnedBooksdataGridView2.Columns[0].Width = 70;
             }
         }
 
         private void txtSearchEnroll_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            dataGridView2.DataSource = null;    
+            issuedBooksdataGridView1.DataSource = null;
+            returnedBooksdataGridView2.DataSource = null;    
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -76,6 +80,18 @@ namespace Library_Management_System
         private void CompleteBookDetails_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void issuedBooksdataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            DataGridViewRow row = issuedBooksdataGridView1.Rows[e.RowIndex];
+            row.Cells["serialNumber"].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void returnedBooksdataGridView2_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            DataGridViewRow row = returnedBooksdataGridView2.Rows[e.RowIndex];
+            row.Cells["serialNumber"].Value = (e.RowIndex+1).ToString();
         }
     }
 }

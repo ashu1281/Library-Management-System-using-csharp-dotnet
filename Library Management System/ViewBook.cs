@@ -36,7 +36,13 @@ namespace Library_Management_System
 
             da.Fill(ds);
 
-            dataGridView1.DataSource = ds.Tables[0];
+            if(ds.Tables[0].Rows.Count != 0)
+            {
+                dataGridView1.Columns.Add("serialNumber", "Sr.No.");
+                dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[0].Width = 70;
+                dataGridView1.Columns[1].Width = 60;
+            }
 
         }
 
@@ -44,9 +50,9 @@ namespace Library_Management_System
         Int64 rowid;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!=null && dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()!="")
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 1 && dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!=null && dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()!="")
             {
-                bid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                bid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
 
                 
                 panel2.Visible = true;
@@ -188,6 +194,12 @@ namespace Library_Management_System
                 MessageBox.Show("Data Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ViewBook_Load(sender, e);
             }
+        }
+
+        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            row.Cells["serialNumber"].Value = (e.RowIndex + 1).ToString();
         }
     }
 }

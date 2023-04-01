@@ -35,13 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchEnroll = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.issuedBooksdataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.returnedBooksdataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issuedBooksdataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnedBooksdataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,9 +75,9 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // dataGridView1
+            // issuedBooksdataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.issuedBooksdataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,8 +85,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.issuedBooksdataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.issuedBooksdataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,13 +94,14 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 143);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1351, 208);
-            this.dataGridView1.TabIndex = 3;
+            this.issuedBooksdataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.issuedBooksdataGridView1.Location = new System.Drawing.Point(23, 143);
+            this.issuedBooksdataGridView1.Name = "issuedBooksdataGridView1";
+            this.issuedBooksdataGridView1.RowHeadersWidth = 51;
+            this.issuedBooksdataGridView1.RowTemplate.Height = 24;
+            this.issuedBooksdataGridView1.Size = new System.Drawing.Size(1351, 208);
+            this.issuedBooksdataGridView1.TabIndex = 3;
+            this.issuedBooksdataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.issuedBooksdataGridView1_RowPostPaint);
             // 
             // label2
             // 
@@ -124,9 +125,9 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Returned Books : ";
             // 
-            // dataGridView2
+            // returnedBooksdataGridView2
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.returnedBooksdataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,8 +135,8 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.returnedBooksdataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.returnedBooksdataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,13 +144,14 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView2.Location = new System.Drawing.Point(26, 430);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1348, 271);
-            this.dataGridView2.TabIndex = 6;
+            this.returnedBooksdataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.returnedBooksdataGridView2.Location = new System.Drawing.Point(26, 430);
+            this.returnedBooksdataGridView2.Name = "returnedBooksdataGridView2";
+            this.returnedBooksdataGridView2.RowHeadersWidth = 51;
+            this.returnedBooksdataGridView2.RowTemplate.Height = 24;
+            this.returnedBooksdataGridView2.Size = new System.Drawing.Size(1348, 271);
+            this.returnedBooksdataGridView2.TabIndex = 6;
+            this.returnedBooksdataGridView2.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.returnedBooksdataGridView2_RowPostPaint);
             // 
             // btnRefresh
             // 
@@ -170,10 +172,10 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1386, 713);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.returnedBooksdataGridView2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.issuedBooksdataGridView1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearchEnroll);
             this.Controls.Add(this.label1);
@@ -181,8 +183,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompleteBookDetails";
             this.Load += new System.EventHandler(this.CompleteBookDetails_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issuedBooksdataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnedBooksdataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,10 +195,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearchEnroll;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView issuedBooksdataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView returnedBooksdataGridView2;
         private System.Windows.Forms.Button btnRefresh;
     }
 }

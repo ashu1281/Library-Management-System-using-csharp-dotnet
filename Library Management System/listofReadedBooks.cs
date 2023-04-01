@@ -26,7 +26,7 @@ namespace Library_Management_System
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
 
-            cmd.CommandText = "SELECT bName,bAuthor,bPubl FROM NewBook WHERE bName IN (SELECT Book_Name FROM IssueReturnBook) ORDER BY bName ASC";
+            cmd.CommandText = "SELECT t1.bName, t1.bAuthor, t1.bPubl, COUNT(t2.Book_Name) AS count FROM NewBook t1 JOIN IssueReturnBook t2 ON t1.bName = t2.Book_Name GROUP BY t1.bName, t1.bAuthor, t1.bPubl ORDER BY count DESC";
 
 
 
@@ -42,12 +42,14 @@ namespace Library_Management_System
                 bookListdataGridView.Columns.Add("bName", "Book Name");
                 bookListdataGridView.Columns.Add("bAuthor", "Author Name");
                 bookListdataGridView.Columns.Add("bPubl", "Publication Name");
+                bookListdataGridView.Columns.Add("count", "Read Count");
                 bookListdataGridView.Columns[0].Width = 60;
                 bookListdataGridView.Columns[1].DataPropertyName = "bName";
                // bookListdataGridView.Columns[1].Width = 200;
                 bookListdataGridView.Columns[2].DataPropertyName = "bAuthor";
                 //bookListdataGridView.Columns[2].Width = 200;
                 bookListdataGridView.Columns[3].DataPropertyName = "bPubl";
+                bookListdataGridView.Columns[4].DataPropertyName = "count";
 
             }
         }
