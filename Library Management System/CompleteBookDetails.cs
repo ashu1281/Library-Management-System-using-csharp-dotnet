@@ -72,5 +72,10 @@ namespace Library_Management_System
         {
             txtSearchEnroll.Clear();
         }
+
+        private void CompleteBookDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

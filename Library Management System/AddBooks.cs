@@ -40,8 +40,8 @@ namespace Library_Management_System
                 String bname = txtBookName.Text;
                 String bauthor = txtAuthor.Text;
                 String bpublication = txtPublication.Text;
-                String bpubDate = dateTimePicker1.Text;
-                Int64 bprice = Int64.Parse(txtPrice.Text);
+                String bpurDate = dateTimePicker1.Text;
+                String bprice = txtPrice.Text;
                 Int64 bquantity = Int64.Parse(txtQuantity.Text);
 
                 SqlConnection conn = new SqlConnection();
@@ -53,7 +53,7 @@ namespace Library_Management_System
                 cmd.Connection = conn;
 
                 conn.Open();
-                cmd.CommandText = "insert into NewBook (bName, bAuthor, bPubl, bPubDate, bPrice, bQuan) values ('" + bname + "','" + bauthor + "','" + bpublication + "','" + bpubDate + "','" + bprice + "','" + bquantity + "')";
+                cmd.CommandText = "insert into NewBook (bName, bAuthor, bPubl, bPurDate, bPrice, bQuan) values ('" + bname + "','" + bauthor + "','" + bpublication + "','" + bpurDate + "','" + bprice + "','" + bquantity + "')";
                 cmd.ExecuteNonQuery();
                 conn.Close();
 

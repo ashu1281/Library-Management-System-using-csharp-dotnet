@@ -213,6 +213,16 @@ namespace Library_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hashtag_trending {
+            get {
+                object obj = ResourceManager.GetObject("hashtag-trending", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_book_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-book-48", resourceCulture);
@@ -426,6 +436,36 @@ namespace Library_Management_System.Properties {
         internal static System.Drawing.Bitmap issueBook1 {
             get {
                 object obj = ResourceManager.GetObject("issueBook1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_of_books {
+            get {
+                object obj = ResourceManager.GetObject("list of books", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap listofbooksreaded {
+            get {
+                object obj = ResourceManager.GetObject("listofbooksreaded", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap listofmembers {
+            get {
+                object obj = ResourceManager.GetObject("listofmembers", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

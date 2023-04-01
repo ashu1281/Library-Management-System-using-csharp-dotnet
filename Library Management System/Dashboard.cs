@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,12 +29,54 @@ namespace Library_Management_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            label1.BackColor = System.Drawing.Color.Transparent;
+            
+            pictureBox1.BackColor = System.Drawing.Color.Transparent;
 
-        }
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=LibraryManagement;Integrated Security=True;Pooling=False";
+            SqlCommand cmd = new SqlCommand();  
+            cmd.Connection = conn;
 
-        private void vewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            cmd.CommandText = "SELECT TOP 3 Book_Name, COUNT(*) AS count FROM IssueReturnBook GROUP BY Book_Name ORDER BY count DESC ";
 
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                BooksdataGridView.DataSource = ds.Tables[0];
+                BooksdataGridView.Columns.Clear();
+                BooksdataGridView.Columns.Add("serialNumber", "Rank");
+                BooksdataGridView.Columns.Add("Book_Name", "Book Name");
+                BooksdataGridView.Columns.Add("count", "Read Count");
+                BooksdataGridView.Columns[0].Width = 60;
+                BooksdataGridView.Columns[1].DataPropertyName = "Book_Name";
+                BooksdataGridView.Columns[1].Width = 200;
+                BooksdataGridView.Columns[2].DataPropertyName = "count";
+
+            }
+            
+            cmd.CommandText = "SELECT TOP 3 Member_Name, COUNT(*) AS count FROM IssueReturnBook where Book_Return_Date is not null GROUP BY Member_Name ORDER BY count DESC ";
+
+            SqlDataAdapter da1 = new SqlDataAdapter(cmd);
+            DataSet ds1 = new DataSet();
+            da1.Fill(ds1);
+
+            if (ds1.Tables[0].Rows.Count != 0)
+            {
+                MemberdataGridView.DataSource = ds1.Tables[0];
+                MemberdataGridView.Columns.Clear();
+                MemberdataGridView.Columns.Add("serialNumber", "Rank");
+                MemberdataGridView.Columns.Add("Member_Name", "Member Name");
+                MemberdataGridView.Columns.Add("count", "No. of Readed Books");
+                MemberdataGridView.Columns[1].DataPropertyName = "Member_Name";
+                MemberdataGridView.Columns[2].DataPropertyName = "count";
+                MemberdataGridView.Columns[0].Width = 60;
+                MemberdataGridView.Columns[1].Width = 200;
+
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +159,51 @@ namespace Library_Management_System
         {
             CompleteBookDetails cbd = new CompleteBookDetails();
             cbd.Show();
+        }
+
+
+        private void BooksdataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            DataGridViewRow row = BooksdataGridView.Rows[e.RowIndex];
+            row.Cells["serialNumber"].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void MemberdataGridView_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            DataGridViewRow row = MemberdataGridView.Rows[e.RowIndex];
+            row.Cells["serialNumber"].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void BooksdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Dashboard_Load(sender, e);
+        }
+
+        private void listOfReadedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listofReadedBooks lrb = new listofReadedBooks();
+            lrb.Show();
+        }
+
+        private void listOfMembersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListofMembers lm = new ListofMembers();
+            lm.Show();
         }
     }
 }

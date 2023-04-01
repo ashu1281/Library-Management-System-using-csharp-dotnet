@@ -150,7 +150,7 @@ namespace Library_Management_System
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "update NewBook set bName = '" + bname + "' ,bAuthor = '" + bauthor + "' ,bPubl = '" + bpublication + "' ,bPubDate = '" + bpurDate + "', bPrice=" + bprice + ", bQuan = " + bquantity + " where bId = " + rowid + "";
+                cmd.CommandText = "update NewBook set bName = '" + bname + "' ,bAuthor = '" + bauthor + "' ,bPubl = '" + bpublication + "' ,bPurDate = '" + bpurDate + "', bPrice=" + bprice + ", bQuan = " + bquantity + " where bId = " + rowid + "";
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();

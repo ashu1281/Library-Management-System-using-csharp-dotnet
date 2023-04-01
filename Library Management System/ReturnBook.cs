@@ -161,6 +161,22 @@ namespace Library_Management_System
                 dataGridView1.DataSource = ds1.Tables[0];
             }
 
+            panel3.Visible = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

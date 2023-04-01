@@ -37,7 +37,7 @@ namespace Library_Management_System
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from NewMember where EnrollID LIKE '" + eid + "'";
+                cmd.CommandText = "select * from NewMember where EnrollID = '" + eid + "'";
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
@@ -66,14 +66,12 @@ namespace Library_Management_System
                 count =Int64.Parse(ds1.Tables[0].Rows.Count.ToString());
 
 
-
-
                 comboBoxBooks.Items.Clear();
                 conn.Open();
 
                 SqlCommand cmd3 = new SqlCommand();
                 string sqlCommandText = string.Empty;
-                sqlCommandText = "SELECT bName FROM NewBook WHERE bName NOT IN (SELECT Book_Name FROM IssueReturnBook WHERE EnrollID = '"+eid+ "' and Book_Return_Date is NULL);";
+                sqlCommandText = "SELECT bName FROM NewBook WHERE bName NOT IN (SELECT Book_Name FROM IssueReturnBook WHERE EnrollID = '"+eid+ "' and Book_Return_Date is NULL) ORDER BY bName ASC";
 
                 cmd3 = new SqlCommand(sqlCommandText, conn);
                 SqlDataReader Sdr = cmd3.ExecuteReader();
@@ -131,7 +129,7 @@ namespace Library_Management_System
 
                         String enroll = txtEnroll.Text;
                         String name= txtName.Text;
-                        Int64 contact= Int64.Parse(txtContact.Text);
+                        String contact= txtContact.Text;
                         String email= txtEmail.Text;
                         String bookName = comboBoxBooks.Text;
                         String issueDate = dateTimePicker1.Text;
@@ -142,7 +140,7 @@ namespace Library_Management_System
                         SqlCommand cmd = new SqlCommand();
                         cmd.Connection = conn;
                         conn.Open();
-                        cmd.CommandText = "insert into IssueReturnBook (EnrollID,Member_Name,Member_Contact,Member_Email,Book_Name,Book_Issue_Date) values ('" + enroll+"','"+name+"',"+contact+",'"+email+"','"+bookName+"','"+issueDate+"')";
+                        cmd.CommandText = "insert into IssueReturnBook (EnrollID,Member_Name,Member_Contact,Member_Email,Book_Name,Book_Issue_Date) values ('" + enroll+"','"+name+"','"+contact+"','"+email+"','"+bookName+"','"+issueDate+"')";
                         cmd.ExecuteNonQuery();
                         conn.Close();
                         MessageBox.Show("Book Issued Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

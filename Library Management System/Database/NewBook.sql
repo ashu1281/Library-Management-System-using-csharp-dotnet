@@ -4,7 +4,7 @@ bName varchar(250) not null,
 bAuthor varchar(250) not null,
 bPubl varchar(250) not null,
 bPubDate varchar(250) not null,
-bPrice bigint not null,
+bPrice varchar(250) not null,
 bQuan bigint not null
 )
 

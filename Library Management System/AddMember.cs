@@ -54,7 +54,7 @@ namespace Library_Management_System
             {
 
                 String name = txtFullName.Text;
-                Int64 contact = Int64.Parse(txtContactNum.Text);
+                String contact = txtContactNum.Text;
                 String email = txtEmilid.Text;
                 String state = combostate.Text;
                 String city = txtcityName.Text;
@@ -69,7 +69,7 @@ namespace Library_Management_System
                 cmd.Connection= conn;
 
                 conn.Open();
-                cmd.CommandText = "insert into NewMember (mName,mContact,mEmail,mState,mCity,mPinCode) values ('" + name + "'," + contact + ",'" + email + "','" + state + "','" + city + "',"+pincode+")";
+                cmd.CommandText = "insert into NewMember (mName,mContact,mEmail,mState,mCity,mPinCode) values ('" + name + "','" + contact + "','" + email + "','" + state + "','" + city + "',"+pincode+")";
                 cmd.ExecuteNonQuery();
 
                 SqlCommand cmd2 = new SqlCommand("SELECT TOP 1 EnrollId FROM NewMember ORDER BY ID DESC", conn);
@@ -101,6 +101,11 @@ namespace Library_Management_System
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

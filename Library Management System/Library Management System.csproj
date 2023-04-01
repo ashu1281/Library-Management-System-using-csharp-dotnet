@@ -70,6 +70,18 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListofMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListofMembers.Designer.cs">
+      <DependentUpon>ListofMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listofReadedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listofReadedBooks.Designer.cs">
+      <DependentUpon>listofReadedBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListofMembers.resx">
+      <DependentUpon>ListofMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listofReadedBooks.resx">
+      <DependentUpon>listofReadedBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -166,6 +184,7 @@
     <Content Include="icon and imgs\deash1.jpg" />
     <None Include="icon and imgs\Ellipsis-1s-237px.gif" />
     <Content Include="icon and imgs\giphy.gif" />
+    <None Include="icon and imgs\hashtag-trending.gif" />
     <Content Include="icon and imgs\icons8-add-book-48.png" />
     <Content Include="icon and imgs\icons8-add-book-96.png" />
     <Content Include="icon and imgs\icons8-add-user-male-50.png" />
@@ -185,6 +204,9 @@
     <Content Include="icon and imgs\issueBook.gif" />
     <None Include="icon and imgs\login-user.png" />
     <None Include="icon and imgs\login-pass.png" />
+    <None Include="icon and imgs\list of books.jpg" />
+    <None Include="icon and imgs\listofbooksreaded.png" />
+    <None Include="icon and imgs\listofmembers.png" />
     <Content Include="icon and imgs\motivation1.jpg" />
     <Content Include="icon and imgs\search.gif" />
     <Content Include="icon and imgs\search1.gif" />

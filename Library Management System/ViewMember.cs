@@ -168,7 +168,7 @@ namespace Library_Management_System
             if(MessageBox.Show("Data will be modified, Confirm?","Are you sure!", MessageBoxButtons.OK, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 String fullname = txtFullName.Text;
-                Int64 contact = Int64.Parse(txtContact.Text);
+                String contact = txtContact.Text;
                 String email = txtEmail.Text;
                 String state = txtState.Text;
                 String city = txtCity.Text;
@@ -180,7 +180,7 @@ namespace Library_Management_System
                 SqlCommand cmd = conn.CreateCommand(); 
                 cmd.Connection= conn;
 
-                cmd.CommandText = "update NewMember set mName='" + fullname + "', mContact="+contact+", mEmail='"+email+"', mState='"+state+"', mCity='"+city+"', mPinCode="+pin+ " where ID = "+ rowid +" "; 
+                cmd.CommandText = "update NewMember set mName='" + fullname + "', mContact='"+contact+"', mEmail='"+email+"', mState='"+state+"', mCity='"+city+"', mPinCode="+pin+ " where ID = "+ rowid +" "; 
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
@@ -198,13 +198,7 @@ namespace Library_Management_System
             if (MessageBox.Show("Data Will be Deleted. Confirm?", "Confirmation Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
 
-                String fullname = txtFullName.Text;
-                Int64 contact = Int64.Parse(txtContact.Text);
-                String email = txtEmail.Text;
-                String state = txtState.Text;
-                String city = txtCity.Text;
-                Int64 pin = Int64.Parse(txtPincode.Text);
-
+               
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=LibraryManagement;Integrated Security=True;Pooling=False";
 
