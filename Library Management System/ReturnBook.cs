@@ -22,20 +22,12 @@ namespace Library_Management_System
         }
 
         
-
-        
-
-        
-
         private void Return_Book_Load(object sender, EventArgs e)
         {
             panel3.Visible = false;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -46,7 +38,7 @@ namespace Library_Management_System
             SqlCommand cmd = new SqlCommand();
             cmd.Connection= conn;
 
-            cmd.CommandText = "select EnrollID,Member_Name,Book_Name,Book_Issue_Date,Book_Return_Date from IssueReturnBook where EnrollID= '" + enroll + "' and Book_Return_Date is Null";
+            cmd.CommandText = "select ID,EnrollID,Member_Name,Book_Name,Book_Issue_Date,Book_Return_Date from IssueReturnBook where EnrollID= '" + enroll + "' and Book_Return_Date is Null";
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -56,6 +48,8 @@ namespace Library_Management_System
             {
                 
                 dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[0].Width = 50;
+                dataGridView1.Columns[1].Width = 80;
             }
             else
             {
@@ -65,7 +59,7 @@ namespace Library_Management_System
         }
 
 
-        string enrollid;
+        int id;
         Int64 rowid;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -73,7 +67,7 @@ namespace Library_Management_System
             {
 
 
-                enrollid = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
                 
                 panel3.Visible = true;
@@ -84,7 +78,7 @@ namespace Library_Management_System
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from IssueReturnBook where EnrollID = '" + enrollid + "' and Book_Return_Date is Null";
+                cmd.CommandText = "select * from IssueReturnBook where ID = " + id + "";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -126,10 +120,14 @@ namespace Library_Management_System
             panel3.Visible= false;
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        
+
+        private void btnReturnBook_Click(object sender, EventArgs e)
         {
+            
             String enroll = txtsearchEnroll.Text;
             String rtdate = ReturnDateTimePicker1.Text;
+            String bookName = txtBookName.Text;            
 
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=LibraryManagement;Integrated Security=True;Pooling=False";
@@ -137,15 +135,30 @@ namespace Library_Management_System
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
 
+            cmd.CommandText = "select bQuan from NewBook where bName = '" + bookName + "'";
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            object quan = ds.Tables[0].Rows[0][0];
+            Int64 quantity = Convert.ToInt64(quan);
+
+
+            //update book return date 
             conn.Open();
 
-            cmd.CommandText = "update IssueReturnBook SET Book_Return_Date = '"+rtdate+"' WHERE ID="+rowid+"";
+            cmd.CommandText = "update IssueReturnBook SET Book_Return_Date = '" + rtdate + "' WHERE ID=" + rowid + "";
+            cmd.ExecuteNonQuery();
+
+            quantity++;
+            cmd.CommandText = "update NewBook SET bQuan = " + quantity + " WHERE bName='" + bookName + "'";
             cmd.ExecuteNonQuery();
 
             conn.Close();
             MessageBox.Show("Book Return Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+
+            //refresh datagridview1
 
             SqlCommand cmd1 = new SqlCommand();
             cmd1.Connection = conn;
@@ -162,21 +175,6 @@ namespace Library_Management_System
             }
 
             panel3.Visible = false;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

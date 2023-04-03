@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,10 +22,7 @@ namespace Library_Management_System
 
         
 
-        private void MemberToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -164,14 +162,21 @@ namespace Library_Management_System
 
         private void BooksdataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            DataGridViewRow row = BooksdataGridView.Rows[e.RowIndex];
-            row.Cells["serialNumber"].Value = (e.RowIndex + 1).ToString();
+            if(e.RowIndex < 3)
+            {
+                DataGridViewRow row = BooksdataGridView.Rows[e.RowIndex];
+                row.Cells["serialNumber"].Value = (e.RowIndex + 1).ToString();
+            }
+              
         }
 
         private void MemberdataGridView_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            DataGridViewRow row = MemberdataGridView.Rows[e.RowIndex];
-            row.Cells["serialNumber"].Value = (e.RowIndex + 1).ToString();
+            if(e.RowIndex < 3)
+            {
+                DataGridViewRow row = MemberdataGridView.Rows[e.RowIndex];
+                row.Cells["serialNumber"].Value = (e.RowIndex + 1).ToString();
+            }
         }
 
         private void BooksdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -179,15 +184,7 @@ namespace Library_Management_System
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void label1_Click(object sender, EventArgs e)
         {

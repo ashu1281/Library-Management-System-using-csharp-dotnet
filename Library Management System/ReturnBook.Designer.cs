@@ -49,7 +49,7 @@
             this.txtContact = new System.Windows.Forms.TextBox();
             this.txtMemberName = new System.Windows.Forms.TextBox();
             this.txtEnrollID = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnReturnBook = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -76,9 +76,8 @@
             this.panel1.Location = new System.Drawing.Point(22, 14);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1332, 165);
+            this.panel1.Size = new System.Drawing.Size(1290, 165);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -116,7 +115,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(368, 466);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnExit
             // 
@@ -217,10 +215,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(943, 466);
+            this.dataGridView1.Size = new System.Drawing.Size(901, 466);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel3
             // 
@@ -234,7 +231,7 @@
             this.panel3.Controls.Add(this.txtContact);
             this.panel3.Controls.Add(this.txtMemberName);
             this.panel3.Controls.Add(this.txtEnrollID);
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.btnReturnBook);
             this.panel3.Controls.Add(this.btn_Cancel);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label8);
@@ -246,16 +243,15 @@
             this.panel3.Location = new System.Drawing.Point(22, 711);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1332, 358);
+            this.panel3.Size = new System.Drawing.Size(1290, 358);
             this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
             // 
             // ReturnDateTimePicker1
             // 
             this.ReturnDateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ReturnDateTimePicker1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnDateTimePicker1.Location = new System.Drawing.Point(914, 194);
+            this.ReturnDateTimePicker1.Location = new System.Drawing.Point(872, 194);
             this.ReturnDateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ReturnDateTimePicker1.Name = "ReturnDateTimePicker1";
             this.ReturnDateTimePicker1.Size = new System.Drawing.Size(335, 32);
@@ -266,7 +262,7 @@
             this.txtBookName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookName.Location = new System.Drawing.Point(914, 38);
+            this.txtBookName.Location = new System.Drawing.Point(872, 38);
             this.txtBookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBookName.Name = "txtBookName";
             this.txtBookName.ReadOnly = true;
@@ -278,7 +274,7 @@
             this.txtIssueDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIssueDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIssueDate.Location = new System.Drawing.Point(914, 110);
+            this.txtIssueDate.Location = new System.Drawing.Point(872, 110);
             this.txtIssueDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIssueDate.Name = "txtIssueDate";
             this.txtIssueDate.ReadOnly = true;
@@ -295,7 +291,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(392, 32);
+            this.txtEmail.Size = new System.Drawing.Size(350, 32);
             this.txtEmail.TabIndex = 12;
             // 
             // txtContact
@@ -308,7 +304,7 @@
             this.txtContact.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContact.Name = "txtContact";
             this.txtContact.ReadOnly = true;
-            this.txtContact.Size = new System.Drawing.Size(392, 32);
+            this.txtContact.Size = new System.Drawing.Size(350, 32);
             this.txtContact.TabIndex = 11;
             // 
             // txtMemberName
@@ -321,7 +317,7 @@
             this.txtMemberName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMemberName.Name = "txtMemberName";
             this.txtMemberName.ReadOnly = true;
-            this.txtMemberName.Size = new System.Drawing.Size(392, 32);
+            this.txtMemberName.Size = new System.Drawing.Size(350, 32);
             this.txtMemberName.TabIndex = 10;
             // 
             // txtEnrollID
@@ -334,23 +330,23 @@
             this.txtEnrollID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEnrollID.Name = "txtEnrollID";
             this.txtEnrollID.ReadOnly = true;
-            this.txtEnrollID.Size = new System.Drawing.Size(392, 32);
+            this.txtEnrollID.Size = new System.Drawing.Size(350, 32);
             this.txtEnrollID.TabIndex = 9;
             // 
-            // button5
+            // btnReturnBook
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.Green;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(868, 273);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(205, 38);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Return Book";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnReturnBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReturnBook.BackColor = System.Drawing.Color.Green;
+            this.btnReturnBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReturnBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnBook.Location = new System.Drawing.Point(826, 273);
+            this.btnReturnBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReturnBook.Name = "btnReturnBook";
+            this.btnReturnBook.Size = new System.Drawing.Size(205, 38);
+            this.btnReturnBook.TabIndex = 8;
+            this.btnReturnBook.Text = "Return Book";
+            this.btnReturnBook.UseVisualStyleBackColor = false;
+            this.btnReturnBook.Click += new System.EventHandler(this.btnReturnBook_Click);
             // 
             // btn_Cancel
             // 
@@ -358,7 +354,7 @@
             this.btn_Cancel.BackColor = System.Drawing.Color.Red;
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(1123, 273);
+            this.btn_Cancel.Location = new System.Drawing.Point(1081, 273);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(115, 38);
@@ -373,7 +369,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(728, 197);
+            this.label7.Location = new System.Drawing.Point(686, 197);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 24);
             this.label7.TabIndex = 6;
@@ -385,7 +381,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(728, 118);
+            this.label8.Location = new System.Drawing.Point(686, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(151, 24);
             this.label8.TabIndex = 5;
@@ -397,7 +393,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(728, 41);
+            this.label9.Location = new System.Drawing.Point(686, 41);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 24);
             this.label9.TabIndex = 4;
@@ -461,7 +457,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1379, 692);
+            this.ClientSize = new System.Drawing.Size(1421, 692);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
@@ -508,7 +504,7 @@
         private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.TextBox txtMemberName;
         private System.Windows.Forms.TextBox txtEnrollID;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnReturnBook;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.DateTimePicker ReturnDateTimePicker1;
         private System.Windows.Forms.TextBox txtBookName;

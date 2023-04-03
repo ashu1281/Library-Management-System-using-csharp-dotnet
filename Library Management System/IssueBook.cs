@@ -5,9 +5,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Library_Management_System
@@ -139,13 +141,31 @@ namespace Library_Management_System
                         conn.ConnectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=LibraryManagement;Integrated Security=True;Pooling=False";
                         SqlCommand cmd = new SqlCommand();
                         cmd.Connection = conn;
-                        conn.Open();
-                        cmd.CommandText = "insert into IssueReturnBook (EnrollID,Member_Name,Member_Contact,Member_Email,Book_Name,Book_Issue_Date) values ('" + enroll+"','"+name+"','"+contact+"','"+email+"','"+bookName+"','"+issueDate+"')";
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                        MessageBox.Show("Book Issued Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        btnRefresh_Click(sender, e);
+                        cmd.CommandText = "select bQuan from NewBook where bName = '"+bookName+"'";
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+                        object quan = ds.Tables[0].Rows[0][0];
+                        Int64 quantity = Convert.ToInt64(quan);
+
+                        if (quantity > 0 )
+                        {
+                            quantity--;
+                            conn.Open();
+                            cmd.CommandText = "insert into IssueReturnBook (EnrollID,Member_Name,Member_Contact,Member_Email,Book_Name,Book_Issue_Date) values ('" + enroll+"','"+name+"','"+contact+"','"+email+"','"+bookName+"','"+issueDate+"')";
+                            cmd.ExecuteNonQuery();
+                            cmd.CommandText = "update NewBook SET bQuan = " + quantity + " WHERE bName='" + bookName + "'";
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            MessageBox.Show("Book Issued Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            btnRefresh_Click(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Selceted Book is NOT available", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {
