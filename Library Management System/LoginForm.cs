@@ -44,6 +44,7 @@ namespace Library_Management_System
             {
                 Dashboard db= new Dashboard();
                 db.Show();
+                this.Close();
             }
             else
             {

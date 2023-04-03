@@ -82,7 +82,7 @@ namespace Library_Management_System
         {
             if(MessageBox.Show("Are you sure you want to Exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-               
+                this.Close();
             }
         }
 
