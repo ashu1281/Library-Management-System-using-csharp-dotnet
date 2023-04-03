@@ -28,6 +28,7 @@ namespace Library_Management_System
         private void Dashboard_Load(object sender, EventArgs e)
         {
             label1.BackColor = System.Drawing.Color.Transparent;
+           // label5.BackColor = System.Drawing.Color.Transparent;
             
             pictureBox1.BackColor = System.Drawing.Color.Transparent;
 
@@ -81,8 +82,7 @@ namespace Library_Management_System
         {
             if(MessageBox.Show("Are you sure you want to Exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-
-                Application.Exit();
+               
             }
         }
 

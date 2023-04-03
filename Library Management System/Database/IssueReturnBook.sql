@@ -13,9 +13,9 @@ Book_Return_Date varchar(250) not null
 
 select * from IssueReturnBook
 
-ALTER TABLE IssueReturnBook alter COLUMN Book_Return_Date varchar(250) null;
 
-UPDATE IssueReturnBook SET Book_Return_Date='05 March 2023' where id = 7;
-UPDATE IssueReturnBook SET Book_Return_Date='01 March 2023' where id = 14;
-UPDATE IssueReturnBook SET Book_Return_Date='01 March 2023' where id = 10;
+
+--UPDATE IssueReturnBook SET Book_Return_Date='05 March 2023' where id = 7;
+--UPDATE IssueReturnBook SET Book_Return_Date='01 March 2023' where id = 14;
+--UPDATE IssueReturnBook SET Book_Return_Date='01 March 2023' where id = 10;
 

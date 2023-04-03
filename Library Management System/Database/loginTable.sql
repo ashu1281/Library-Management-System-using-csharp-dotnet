@@ -9,4 +9,3 @@ select * from loginTable
 
 insert into loginTable (UserName,Pass) values ('ashish','123');
 
-DROP TABLE loginTable;

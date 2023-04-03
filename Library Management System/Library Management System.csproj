@@ -114,6 +114,12 @@
     <Compile Include="ViewMember.Designer.cs">
       <DependentUpon>ViewMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddBooks.resx">
       <DependentUpon>AddBooks.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="ViewMember.resx">
       <DependentUpon>ViewMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,6 +188,9 @@
     <Content Include="icon and imgs\add book.gif" />
     <Content Include="icon and imgs\addstudent.gif" />
     <None Include="icon and imgs\Bean Eater-1s-77px.gif" />
+    <None Include="icon and imgs\booklist.png" />
+    <None Include="icon and imgs\booklist1.png" />
+    <None Include="icon and imgs\bookslists2.png" />
     <Content Include="icon and imgs\books_library_shelves_138556_1920x1080.jpg" />
     <None Include="icon and imgs\Dashboardnew.jpg" />
     <Content Include="icon and imgs\deash1.jpg" />
@@ -207,6 +219,8 @@
     <None Include="icon and imgs\list of books.jpg" />
     <None Include="icon and imgs\listofbooksreaded.png" />
     <None Include="icon and imgs\listofmembers.png" />
+    <None Include="icon and imgs\listofbooksreadedNEW.png" />
+    <None Include="icon and imgs\member group.png" />
     <Content Include="icon and imgs\motivation1.jpg" />
     <Content Include="icon and imgs\search.gif" />
     <Content Include="icon and imgs\search1.gif" />
