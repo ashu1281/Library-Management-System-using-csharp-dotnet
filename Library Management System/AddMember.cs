@@ -26,13 +26,12 @@ namespace Library_Management_System
             {
 
                 this.Close();
-                Dashboard.memRestrict = 0;
             }
         }
 
         private void AddMember_Load(object sender, EventArgs e)
         {
-            ControlBox = false;
+            
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -108,6 +107,11 @@ namespace Library_Management_System
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnBrowseImg_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -79,13 +79,13 @@ namespace Library_Management_System
             {
 
                 this.Close();
-                Dashboard.restrict = 0;
+                
             }
         }
 
         private void AddBooks_Load(object sender, EventArgs e)
         {
-           // ControlBox = false;
+           
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -98,6 +98,11 @@ namespace Library_Management_System
 
             //dateTimePicker1.
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

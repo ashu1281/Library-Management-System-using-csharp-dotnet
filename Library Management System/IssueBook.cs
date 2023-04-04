@@ -93,8 +93,7 @@ namespace Library_Management_System
 
         private void IssueBook_Load(object sender, EventArgs e)
         {
-            ControlBox = false;
-            
+                       
         }
 
         private void txtEnroll_TextChanged(object sender, EventArgs e)
@@ -188,7 +187,6 @@ namespace Library_Management_System
             if(MessageBox.Show("Are you Sure, You want to Exit", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 this.Close();
-                Dashboard.issueBookRestrict = 0;
             }
             
         }

@@ -47,10 +47,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnBrowseImg = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,10 +113,10 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(319, 127);
+            this.panel2.Location = new System.Drawing.Point(321, 127);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(580, 478);
+            this.panel2.Size = new System.Drawing.Size(578, 478);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -166,7 +169,7 @@
             "Other"});
             this.combostate.Location = new System.Drawing.Point(219, 220);
             this.combostate.Name = "combostate";
-            this.combostate.Size = new System.Drawing.Size(328, 30);
+            this.combostate.Size = new System.Drawing.Size(326, 30);
             this.combostate.TabIndex = 15;
             // 
             // btnExit
@@ -175,7 +178,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(464, 387);
+            this.btnExit.Location = new System.Drawing.Point(462, 387);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(83, 43);
@@ -190,7 +193,7 @@
             this.btnSaveInfo.BackColor = System.Drawing.Color.Lime;
             this.btnSaveInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveInfo.Location = new System.Drawing.Point(305, 387);
+            this.btnSaveInfo.Location = new System.Drawing.Point(303, 387);
             this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveInfo.Name = "btnSaveInfo";
             this.btnSaveInfo.Size = new System.Drawing.Size(126, 43);
@@ -205,7 +208,7 @@
             this.btnRefresh.BackColor = System.Drawing.Color.Yellow;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(163, 387);
+            this.btnRefresh.Location = new System.Drawing.Point(161, 387);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(109, 43);
@@ -224,7 +227,7 @@
             this.txtpinCode.Location = new System.Drawing.Point(219, 327);
             this.txtpinCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtpinCode.Name = "txtpinCode";
-            this.txtpinCode.Size = new System.Drawing.Size(328, 29);
+            this.txtpinCode.Size = new System.Drawing.Size(326, 29);
             this.txtpinCode.TabIndex = 11;
             // 
             // txtcityName
@@ -237,7 +240,7 @@
             this.txtcityName.Location = new System.Drawing.Point(219, 275);
             this.txtcityName.Margin = new System.Windows.Forms.Padding(4);
             this.txtcityName.Name = "txtcityName";
-            this.txtcityName.Size = new System.Drawing.Size(328, 29);
+            this.txtcityName.Size = new System.Drawing.Size(326, 29);
             this.txtcityName.TabIndex = 10;
             // 
             // txtEmilid
@@ -250,7 +253,7 @@
             this.txtEmilid.Location = new System.Drawing.Point(219, 161);
             this.txtEmilid.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmilid.Name = "txtEmilid";
-            this.txtEmilid.Size = new System.Drawing.Size(328, 29);
+            this.txtEmilid.Size = new System.Drawing.Size(326, 29);
             this.txtEmilid.TabIndex = 8;
             // 
             // txtFullName
@@ -263,7 +266,7 @@
             this.txtFullName.Location = new System.Drawing.Point(219, 41);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(328, 29);
+            this.txtFullName.Size = new System.Drawing.Size(326, 29);
             this.txtFullName.TabIndex = 7;
             // 
             // txtContactNum
@@ -276,7 +279,7 @@
             this.txtContactNum.Location = new System.Drawing.Point(219, 99);
             this.txtContactNum.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactNum.Name = "txtContactNum";
-            this.txtContactNum.Size = new System.Drawing.Size(328, 29);
+            this.txtContactNum.Size = new System.Drawing.Size(326, 29);
             this.txtContactNum.TabIndex = 6;
             // 
             // label7
@@ -370,16 +373,37 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Full Name";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Controls.Add(this.btnBrowseImg);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Location = new System.Drawing.Point(3, 134);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(317, 455);
+            this.panel3.TabIndex = 3;
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.addstudent6;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 127);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Location = new System.Drawing.Point(35, 34);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(319, 465);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.Size = new System.Drawing.Size(242, 255);
+            this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // btnBrowseImg
+            // 
+            this.btnBrowseImg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBrowseImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowseImg.Location = new System.Drawing.Point(35, 329);
+            this.btnBrowseImg.Name = "btnBrowseImg";
+            this.btnBrowseImg.Size = new System.Drawing.Size(242, 44);
+            this.btnBrowseImg.TabIndex = 1;
+            this.btnBrowseImg.Text = "Choose Image";
+            this.btnBrowseImg.UseVisualStyleBackColor = true;
+            this.btnBrowseImg.Click += new System.EventHandler(this.btnBrowseImg_Click);
             // 
             // AddMember
             // 
@@ -387,8 +411,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(901, 594);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddMember";
@@ -400,6 +424,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -410,7 +435,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSaveInfo;
@@ -427,5 +451,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox combostate;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnBrowseImg;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Library_Management_System
 {
     
@@ -82,81 +83,162 @@ namespace Library_Management_System
         {
             if(MessageBox.Show("Are you sure you want to Exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                // Close all open forms except for the dashboard form
+                for (int i = Application.OpenForms.Count - 1; i > 0; i--)
+                {
+                    if (Application.OpenForms[i] != this) // "this" refers to the dashboard form
+                    {
+                        Application.OpenForms[i].Close();
+                    }
+                }
+
+                // Close the dashboard form
                 this.Close();
             }
         }
 
-        public static int restrict = 0;
+       
         private void addNewBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(restrict == 0)
+            
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
             {
-                restrict++;
+                if (f.Text == "AddBooks")
+                {
+                    Isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
                 AddBooks abs = new AddBooks();
                 abs.Show();
-                abs.TopMost= true;
-            }
-            else
-            {
-                MessageBox.Show("Add New Books Form is already opened!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void viewBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewBook vb = new ViewBook();
-            vb.Show();
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if(f.Text == "ViewBook")
+                {
+                    Isopen= true; 
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
+                ViewBook vb = new ViewBook();
+                vb.Show();
+            }
         }
 
 
-        public static int memRestrict = 0;
         private void addMemberToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(memRestrict == 0)
+            
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
             {
-
+                if (f.Text == "AddMember")
+                {
+                    Isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
                 AddMember addMember = new AddMember();
                 addMember.Show();
-                memRestrict++;
-            }
-            else
-            {
-                MessageBox.Show("Form is already Opened.", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
         private void viewMemberToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewMember vm = new ViewMember();
-            vm.Show();
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "ViewMember")
+                {
+                    Isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
+                ViewMember vm = new ViewMember();
+                vm.Show();
+              
+            }
         }
 
-        public static int issueBookRestrict = 0;
         private void issueBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(issueBookRestrict == 0)
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
             {
-                issueBookRestrict++;
+                if (f.Text == "IssueBook")
+                {
+                    Isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
                 IssueBook ib = new IssueBook();
                 ib.Show();
-                //ib.TopMost = true;
+
             }
-            else
-            {
-                MessageBox.Show("Form is already Opened!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
         }
 
         private void returnBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Return_Book rb = new Return_Book();
-            rb.Show();
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Return_Book")
+                {
+                    Isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
+                Return_Book rb = new Return_Book();
+                rb.Show();
+
+            }
+            
         }
 
         private void completeBookDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CompleteBookDetails cbd = new CompleteBookDetails();
-            cbd.Show();
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "CompleteBookDetails")
+                {
+                    Isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
+                CompleteBookDetails cbd = new CompleteBookDetails();
+                cbd.Show();
+            }
+            
         }
 
 
@@ -193,14 +275,42 @@ namespace Library_Management_System
 
         private void listOfReadedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listofReadedBooks lrb = new listofReadedBooks();
-            lrb.Show();
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "listofReadedBooks")
+                {
+                    Isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
+                listofReadedBooks lrb = new listofReadedBooks();
+                lrb.Show();
+            }
+            
         }
 
         private void listOfMembersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListofMembers lm = new ListofMembers();
-            lm.Show();
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "ListofMembers")
+                {
+                    Isopen = true;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (Isopen == false)
+            {
+                ListofMembers lm = new ListofMembers();
+                lm.Show();
+            }
+            
         }
     }
 }
