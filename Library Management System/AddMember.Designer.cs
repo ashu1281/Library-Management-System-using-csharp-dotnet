@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.combostate = new System.Windows.Forms.ComboBox();
             this.btnExit = new System.Windows.Forms.Button();
@@ -48,13 +47,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBrowseImg = new System.Windows.Forms.Button();
+            this.pictureBoxMember = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMember)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,17 +80,6 @@
             this.label1.Size = new System.Drawing.Size(200, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Add Member";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.icons8_student_male_10002;
-            this.pictureBox1.Location = new System.Drawing.Point(270, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -377,21 +366,11 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel3.Controls.Add(this.btnBrowseImg);
-            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.pictureBoxMember);
             this.panel3.Location = new System.Drawing.Point(3, 134);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(317, 455);
             this.panel3.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(35, 34);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(242, 255);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // btnBrowseImg
             // 
@@ -404,6 +383,29 @@
             this.btnBrowseImg.Text = "Choose Image";
             this.btnBrowseImg.UseVisualStyleBackColor = true;
             this.btnBrowseImg.Click += new System.EventHandler(this.btnBrowseImg_Click);
+            // 
+            // pictureBoxMember
+            // 
+            this.pictureBoxMember.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBoxMember.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxMember.Image = global::Library_Management_System.Properties.Resources.user_demo;
+            this.pictureBoxMember.Location = new System.Drawing.Point(35, 34);
+            this.pictureBoxMember.Name = "pictureBoxMember";
+            this.pictureBoxMember.Size = new System.Drawing.Size(242, 255);
+            this.pictureBoxMember.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMember.TabIndex = 0;
+            this.pictureBoxMember.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.icons8_student_male_10002;
+            this.pictureBox1.Location = new System.Drawing.Point(270, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // AddMember
             // 
@@ -421,11 +423,11 @@
             this.Load += new System.EventHandler(this.AddMember_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMember)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,6 +455,6 @@
         private System.Windows.Forms.ComboBox combostate;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnBrowseImg;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxMember;
     }
 }

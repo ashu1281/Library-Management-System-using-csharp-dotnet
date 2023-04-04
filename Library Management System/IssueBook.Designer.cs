@@ -37,7 +37,7 @@
             this.btnSearchEnrollNo = new System.Windows.Forms.Button();
             this.txtEnroll = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMemberImg = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnIssueBook = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMemberImg)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,7 +103,7 @@
             this.panel2.Controls.Add(this.btnSearchEnrollNo);
             this.panel2.Controls.Add(this.txtEnroll);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.pictureBoxMemberImg);
             this.panel2.Location = new System.Drawing.Point(13, 217);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(383, 505);
@@ -165,16 +165,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Enter Enrollment No.";
             // 
-            // pictureBox2
+            // pictureBoxMemberImg
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.icons8_student_male_1002;
-            this.pictureBox2.Location = new System.Drawing.Point(103, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(157, 138);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxMemberImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxMemberImg.Image = global::Library_Management_System.Properties.Resources.icons8_student_male_1002;
+            this.pictureBoxMemberImg.Location = new System.Drawing.Point(103, 26);
+            this.pictureBoxMemberImg.Name = "pictureBoxMemberImg";
+            this.pictureBoxMemberImg.Size = new System.Drawing.Size(157, 138);
+            this.pictureBoxMemberImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMemberImg.TabIndex = 0;
+            this.pictureBoxMemberImg.TabStop = false;
             // 
             // panel3
             // 
@@ -372,7 +372,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMemberImg)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -390,7 +390,7 @@
         private System.Windows.Forms.Button btnSearchEnrollNo;
         private System.Windows.Forms.TextBox txtEnroll;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxMemberImg;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

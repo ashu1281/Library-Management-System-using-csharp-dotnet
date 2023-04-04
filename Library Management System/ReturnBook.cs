@@ -40,6 +40,8 @@ namespace Library_Management_System
 
             cmd.CommandText = "select ID,EnrollID,Member_Name,Book_Name,Book_Issue_Date,Book_Return_Date from IssueReturnBook where EnrollID= '" + enroll + "' and Book_Return_Date is Null";
 
+           // cmd.CommandText = "SELECT t1.ID, t1.EnrollID, t1.bPubl, COUNT(t2.Book_Name) AS count FROM NewBook t1 JOIN IssueReturnBook t2 ON t1.bName = t2.Book_Name
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -50,6 +52,19 @@ namespace Library_Management_System
                 dataGridView1.DataSource = ds.Tables[0];
                 dataGridView1.Columns[0].Width = 50;
                 dataGridView1.Columns[1].Width = 80;
+                if (ds.Tables[0].Rows[0][8].ToString() != "")
+                {
+
+                    // Get the image data from the result set
+                    byte[] imageData = (byte[])ds.Tables[0].Rows[0][8];
+
+                    // Convert the image data to an Image object
+                    Image image = ViewMember.ByteArrayToImage(imageData);
+                    if (image != null)
+                    {
+                        pictureBoxMemberImg.Image = image;
+                    }
+                }
             }
             else
             {

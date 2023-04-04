@@ -39,7 +39,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtsearchEnroll = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMemberImg = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ReturnDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -61,7 +61,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMemberImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -109,7 +109,7 @@
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtsearchEnroll);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.pictureBoxMemberImg);
             this.panel2.Location = new System.Drawing.Point(22, 201);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
@@ -175,18 +175,18 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Enter Enrollment Number";
             // 
-            // pictureBox2
+            // pictureBoxMemberImg
             // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.icons8_student_male_1003;
-            this.pictureBox2.Location = new System.Drawing.Point(109, 30);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(128, 133);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxMemberImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxMemberImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxMemberImg.Image = global::Library_Management_System.Properties.Resources.icons8_student_male_1003;
+            this.pictureBoxMemberImg.Location = new System.Drawing.Point(98, 23);
+            this.pictureBoxMemberImg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxMemberImg.Name = "pictureBoxMemberImg";
+            this.pictureBoxMemberImg.Size = new System.Drawing.Size(160, 157);
+            this.pictureBoxMemberImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMemberImg.TabIndex = 0;
+            this.pictureBoxMemberImg.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -457,7 +457,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1421, 692);
+            this.ClientSize = new System.Drawing.Size(1442, 692);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
@@ -472,7 +472,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMemberImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -486,7 +486,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxMemberImg;
         private System.Windows.Forms.TextBox txtsearchEnroll;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;

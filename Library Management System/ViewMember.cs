@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,6 +98,22 @@ namespace Library_Management_System
 
         }
 
+
+
+        public static Image ByteArrayToImage(byte[] imageData)
+        {
+            if (imageData == null)
+            {
+                return null;
+            }
+
+            using (MemoryStream ms = new MemoryStream(imageData))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+
         int mid;
         Int64 rowid;
 
@@ -142,6 +159,26 @@ namespace Library_Management_System
                 txtState.Text = ds.Tables[0].Rows[0][5].ToString();
                 txtCity.Text = ds.Tables[0].Rows[0][6].ToString();
                 txtPincode.Text = ds.Tables[0].Rows[0][7].ToString();
+
+                if (ds.Tables[0].Rows[0][8].ToString() != "")
+                {
+
+                    // Get the image data from the result set
+                    byte[] imageData = (byte[])ds.Tables[0].Rows[0][8];
+
+                    // Convert the image data to an Image object
+                    Image image1 = ByteArrayToImage(imageData);
+                    if (image1 != null)
+                    {
+                        pictureBoxMemberImg.Image = image1;
+                    }
+                }
+                else
+                {
+                    Image image2 = Image.FromFile("D:\\pratiti training\\Project\\Library Management System\\Library Management System\\icon and imgs\\icons8-student-male-100.png");
+                    pictureBoxMemberImg.Image = image2;
+                }
+
             }
             //else
             //{
@@ -222,6 +259,11 @@ namespace Library_Management_System
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }

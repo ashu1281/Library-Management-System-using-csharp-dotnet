@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -25,6 +26,11 @@ namespace Library_Management_System
             this.MouseUp += new MouseEventHandler(IssueBook_MouseUp);
         }
 
+
+
+
+
+       
 
         Int64 count = 0;
         private void btnSearchEnrollNo_Click(object sender, EventArgs e)
@@ -52,31 +58,43 @@ namespace Library_Management_System
                     txtName.Text = ds.Tables[0].Rows[0][2].ToString();
                     txtContact.Text = ds.Tables[0].Rows[0][3].ToString();
                     txtEmail.Text = ds.Tables[0].Rows[0][4].ToString();
+                    
+                    if(ds.Tables[0].Rows[0][8].ToString() != "")
+                    {
+
+                        // Get the image data from the result set
+                        byte[] imageData = (byte[])ds.Tables[0].Rows[0][8];
+
+                        // Convert the image data to an Image object
+                        Image image = ViewMember.ByteArrayToImage(imageData);
+                        if (image != null)
+                        {
+                            pictureBoxMemberImg.Image = image;
+                        }
+                    }
                 }
                 else
                 {
                     MessageBox.Show("This Enrollment Number does not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-
-                SqlCommand cmd2 = new SqlCommand();
-                cmd2.Connection = conn;
-                cmd2.CommandText = "select * from IssueReturnBook where EnrollId='" + eid + "' and Book_Return_Date is NULL ";
-                SqlDataAdapter da1 = new SqlDataAdapter(cmd2);
+                //for finding count             
+                cmd.CommandText = "select * from IssueReturnBook where EnrollId='" + eid + "' and Book_Return_Date is NULL ";
+                SqlDataAdapter da1 = new SqlDataAdapter(cmd);
                 DataSet ds1 = new DataSet();
                 da1.Fill(ds1);
                 count =Int64.Parse(ds1.Tables[0].Rows.Count.ToString());
 
 
-                comboBoxBooks.Items.Clear();
-                conn.Open();
 
-                SqlCommand cmd3 = new SqlCommand();
+                //exclude already issued books from combobox
+                comboBoxBooks.Items.Clear();
+                conn.Open();             
                 string sqlCommandText = string.Empty;
                 sqlCommandText = "SELECT bName FROM NewBook WHERE bName NOT IN (SELECT Book_Name FROM IssueReturnBook WHERE EnrollID = '"+eid+ "' and Book_Return_Date is NULL) ORDER BY bName ASC";
 
-                cmd3 = new SqlCommand(sqlCommandText, conn);
-                SqlDataReader Sdr = cmd3.ExecuteReader();
+                cmd = new SqlCommand(sqlCommandText, conn);
+                SqlDataReader Sdr = cmd.ExecuteReader();
 
                 while (Sdr.Read())
                 {

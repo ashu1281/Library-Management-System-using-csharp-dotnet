@@ -6,7 +6,8 @@ mContact varchar(250) not null,
 mEmail varchar(250) not null,
 mState varchar(250) not null,
 mCity varchar(250) not null,
-mPinCode bigint not null
+mPinCode bigint not null,
+mPhoto IMAGE NULL
 )
 
 
