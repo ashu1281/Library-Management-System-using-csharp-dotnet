@@ -38,9 +38,9 @@ namespace Library_Management_System
             SqlCommand cmd = new SqlCommand();
             cmd.Connection= conn;
 
-            cmd.CommandText = "select ID,EnrollID,Member_Name,Book_Name,Book_Issue_Date,Book_Return_Date from IssueReturnBook where EnrollID= '" + enroll + "' and Book_Return_Date is Null";
+            //cmd.CommandText = "select ID,EnrollID,Member_Name,Book_Name,Book_Issue_Date,Book_Return_Date from IssueReturnBook where EnrollID= '" + enroll + "' and Book_Return_Date is Null";
 
-           // cmd.CommandText = "SELECT t1.ID, t1.EnrollID, t1.bPubl, COUNT(t2.Book_Name) AS count FROM NewBook t1 JOIN IssueReturnBook t2 ON t1.bName = t2.Book_Name
+            cmd.CommandText = "SELECT t1.ID, t1.EnrollID, t1.Member_Name, t1.Book_Name,t1.Book_Issue_Date,t1.Book_Return_Date,t2.mPhoto FROM IssueReturnBook t1 JOIN NewMember t2 ON t1.EnrollID = t2.EnrollID where t1.EnrollID= '" + enroll + "' and Book_Return_Date is Null";
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -52,11 +52,11 @@ namespace Library_Management_System
                 dataGridView1.DataSource = ds.Tables[0];
                 dataGridView1.Columns[0].Width = 50;
                 dataGridView1.Columns[1].Width = 80;
-                if (ds.Tables[0].Rows[0][8].ToString() != "")
+                if (ds.Tables[0].Rows[0][6].ToString() != "")
                 {
 
                     // Get the image data from the result set
-                    byte[] imageData = (byte[])ds.Tables[0].Rows[0][8];
+                    byte[] imageData = (byte[])ds.Tables[0].Rows[0][6];
 
                     // Convert the image data to an Image object
                     Image image = ViewMember.ByteArrayToImage(imageData);
@@ -64,6 +64,11 @@ namespace Library_Management_System
                     {
                         pictureBoxMemberImg.Image = image;
                     }
+                }
+                else
+                {
+                    Image image2 = Image.FromFile("D:\\pratiti training\\Project\\Library Management System\\Library Management System\\icon and imgs\\icons8-student-male-100.png");
+                    pictureBoxMemberImg.Image = image2;
                 }
             }
             else
@@ -117,6 +122,8 @@ namespace Library_Management_System
             if (txtsearchEnroll.Text == "")
             {
                 dataGridView1.DataSource = null;
+                Image image2 = Image.FromFile("D:\\pratiti training\\Project\\Library Management System\\Library Management System\\icon and imgs\\icons8-student-male-100.png");
+                pictureBoxMemberImg.Image = image2;
             }
         }
 

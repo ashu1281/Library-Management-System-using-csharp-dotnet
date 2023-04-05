@@ -72,6 +72,11 @@ namespace Library_Management_System
                             pictureBoxMemberImg.Image = image;
                         }
                     }
+                    else
+                    {
+                        Image image2 = Image.FromFile("D:\\pratiti training\\Project\\Library Management System\\Library Management System\\icon and imgs\\icons8-student-male-100.png");
+                        pictureBoxMemberImg.Image = image2;
+                    }
                 }
                 else
                 {
@@ -121,9 +126,11 @@ namespace Library_Management_System
                 txtName.Clear();
                 txtContact.Clear();
                 txtEmail.Clear();
-                comboBoxBooks.Items.Clear();    
-
-
+                comboBoxBooks.Items.Clear();
+                
+                Image image2 = Image.FromFile("D:\\pratiti training\\Project\\Library Management System\\Library Management System\\icon and imgs\\icons8-student-male-100.png");
+                pictureBoxMemberImg.Image = image2;
+                
             }
         }
 

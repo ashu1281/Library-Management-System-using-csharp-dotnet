@@ -100,12 +100,6 @@
     <Compile Include="ReturnBook.Designer.cs">
       <DependentUpon>ReturnBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserDashboard.Designer.cs">
-      <DependentUpon>UserDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     </Compile>
     <EmbeddedResource Include="ReturnBook.resx">
       <DependentUpon>ReturnBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserDashboard.resx">
-      <DependentUpon>UserDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewBook.resx">
       <DependentUpon>ViewBook.cs</DependentUpon>
